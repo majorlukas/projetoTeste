@@ -1,7 +1,10 @@
 import React,{Component} from 'react'
 import {View,Text,TextInput,StyleSheet,TouchableOpacity} from 'react-native'
+import {styles} from './styles'
 
 export default class app extends Component{
+
+
 
 constructor(props){
   super(props)
@@ -25,7 +28,7 @@ this.setState({resultado:'Aluno foi Aprovado'})
 
   render(){
     return(
-      <View>
+      <View style={styles.View}>
         <TextInput style={styles.TextInput}
         onChangeText={(nota1) => {this.setState({nota1})}}
         keyboardType='numeric'
@@ -49,44 +52,3 @@ this.setState({resultado:'Aluno foi Aprovado'})
     )
   }
 }
-
-
-const styles = StyleSheet.create({
-  container:{
-    flex: 1
-  },
-  
-  TextInput:{
-    padding: 30, 
-    backgroundColor: '#cccccc',
-    marginLeft: 50,
-    marginRight: 50,
-    marginTop: 30,
-    fontSize: 20,
-    borderRadius: 30,
-
-  },
-  button:{
-    margin: 20,
-    padding: 20,
-    backgroundColor: '#37474f',
-    borderRadius: 20,
-
-  },
-
-  textButton:{
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
-    fontFamily:'arial',
-    alignSelf: 'center',
-    },
-
-    textResultado:{
-      color:'#000',
-      fontSize: 22,
-      fontWeight: 'bold',
-      alignSelf: 'center',
-
-    }
-})
